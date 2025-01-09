@@ -1,0 +1,58 @@
+:root {
+  --body-color: hsl(52, 94%, 94%);
+  --text-color: hsl(88, 38%, 15%);
+  --title-color: hsl(74, 32%, 32%);
+  --subtitle-color: hsl(74, 32%, 10%);
+  --primary-color: hsl(28, 67%, 40%);
+  --primary-color-light: hsl(28, 67%, 80%);
+  --accent-color: hsl(52, 94%, 90%);
+  --font-family-primary: Verdana, Arial, sans-serif;
+  --font-family-secondary: Tahoma, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-color: hsl(88, 38%, 5%);
+    --text-color: hsl(52, 94%, 94%);
+    --title-color: hsl(74, 32%, 40%);
+    --subtitle-color: hsl(74, 32%, 70%);
+    --primary-color: hsl(28, 67%, 40%);
+    --primary-color-light: hsl(28, 67%, 80%);
+    --accent-color: hsl(52, 94%, 3%);
+  }
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--font-family-secondary);
+}
+
+hr {
+  background-color: var(--accent-color);
+}
+
+.content .title,
+.title {
+  color: var(--title-color);
+  font-family: var(--font-family-primary);
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--primary-color-light);
+  border: 1px solid var(--primary-color);
+  transition: 0.2s opacity ease-in-out; 
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  background-color: var(--accent-color);
+}
